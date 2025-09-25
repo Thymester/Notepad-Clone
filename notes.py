@@ -14,8 +14,6 @@ import datetime
 
 
 class ModernIcon:
-    """Create modern, flat design icons programmatically"""
-    
     @staticmethod
     def create_icon(icon_type, size=24, color="#2C3E50"):
         pixmap = QPixmap(size, size)
@@ -250,7 +248,7 @@ class ModernNotepad(QMainWindow):
             QMenuBar::item {
                 background-color: transparent;
                 padding: 6px 12px;
-                border-radius: 4px;
+                border-radius: 4px;`
             }
             QMenuBar::item:selected {
                 background-color: #e9ecef;
@@ -896,3 +894,4 @@ def main():
 
 if __name__ == '__main__':
     main()
+
