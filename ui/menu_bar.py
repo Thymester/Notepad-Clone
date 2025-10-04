@@ -32,6 +32,7 @@ from features.view_operations.toggle_status_bar import ToggleStatusBarAction
 from features.view_operations.dark_mode import DarkModeAction
 
 from features.help_operations.about import AboutAction
+from features.help_operations.setup_file_associations import SetupFileAssociationsAction
 
 
 class MenuBar(QMenuBar):
@@ -50,6 +51,7 @@ class MenuBar(QMenuBar):
         self.create_edit_menu()
         self.create_format_menu()
         self.create_view_menu()
+        self.create_tools_menu()
         self.create_help_menu()
 
     def create_file_menu(self):
@@ -179,6 +181,13 @@ class MenuBar(QMenuBar):
 
         dark_mode_action = DarkModeAction(self.parent_window)
         view_menu.addAction(dark_mode_action)
+
+    def create_tools_menu(self):
+        """Create the Tools menu."""
+        tools_menu = self.addMenu("&Tools")
+
+        setup_associations_action = SetupFileAssociationsAction(self.parent_window)
+        tools_menu.addAction(setup_associations_action)
 
     def create_help_menu(self):
         """Create the Help menu."""
