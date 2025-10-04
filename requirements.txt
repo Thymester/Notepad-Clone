@@ -1,0 +1,6 @@
+PyQt5>=5.15.0
+cryptography>=41.0.0
+symspellpy>=6.7.0
+pyspellchecker>=0.7.0
+textblob>=0.17.0
+transformers>=4.21.0
